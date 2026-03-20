@@ -32,7 +32,7 @@ export default function App() {
     setIsLoading(true);
 
     // BDEL HAD L'URL B LIEN LI 3TAK GOOGLE APPS SCRIPT
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxexwi0yZUO8fEk9mlIVwH9PgULG5cSDalx4knxlyvyP_pLHvuWP0bjED2-p7s8wg4f_w/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzXjM6_Wiv3Ogew7oK1FTHG9aM5YBkEJl8fFbQhd9Y1e5gd5Yq9jNyW1Mll52tyjyloUA/exec';
 
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
