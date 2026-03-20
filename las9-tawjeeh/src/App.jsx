@@ -55,7 +55,7 @@ export default function App() {
     e.preventDefault();
     setIsLoading(true);
 
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxYnwCEyljyMcY5NE4DkQKLFmT-mzzfwnGoNol8SSlTMG3S9Zk-rTPrYxys52htBoh__Q/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwYYD_pf8mpfBmx03Crp3V38A8WxQLn6vAI437eCeswX1TYXBAmwHGllXA30NTfExJn/exec';
 
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
