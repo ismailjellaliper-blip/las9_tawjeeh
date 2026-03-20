@@ -9,14 +9,38 @@ export default function App() {
     city: ''
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [isLoading, setIsLoading] = useState(false); // ZDEDNA HADI
+  const [isLoading, setIsLoading] = useState(false);
 
-  // Import Arabic Font for the Darija text
+  // Effect to load Fonts AND set the Favicon dynamically
   useEffect(() => {
+    // 1. Load Arabic Font
     const link = document.createElement('link');
     link.href = 'https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap';
     link.rel = 'stylesheet';
     document.head.appendChild(link);
+
+    // 2. Set Dynamic Favicon (Using the SVG Logo)
+    const svgIcon = `
+      <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+        <polygon points='20,20 30,20 30,65 65,65 62,75 20,75' fill='%23F24A00' />
+        <polygon points='35,45 45,45 45,55 65,55 65,45 75,45 75,60 35,60' fill='%23F24A00' />
+        <rect x='44' y='32' width='9' height='9' fill='%23F24A00' />
+        <rect x='56' y='32' width='9' height='9' fill='%23F24A00' />
+        <path d='M54.5,15 L38,21 L54.5,27 L71,21 Z' fill='%23000000' />
+        <path d='M47,24 L47,30 A 7.5 3 0 0 0 62 30 L62,24 Z' fill='%23000000' />
+        <path d='M68,22 L68,31' stroke='%23000000' stroke-width='2' />
+        <circle cx='68' cy='33' r='2.5' fill='%23000000' />
+      </svg>
+    `;
+    
+    const favicon = document.querySelector("link[rel*='icon']") || document.createElement('link');
+    favicon.type = 'image/svg+xml';
+    favicon.rel = 'icon';
+    favicon.href = 'data:image/svg+xml,' + svgIcon.replace(/\s+/g, ' ');
+    document.getElementsByTagName('head')[0].appendChild(favicon);
+
+    // 3. Set Page Title
+    document.title = "Las9 Tawjeeh | نسى الـ Stress ديال l'Orientation";
   }, []);
 
   const handleInputChange = (e) => {
@@ -27,24 +51,22 @@ export default function App() {
     }));
   };
 
-  const handleSubmit = async (e) => { // REDINNAHA ASYNC
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
 
-    // BDEL HAD L'URL B LIEN LI 3TAK GOOGLE APPS SCRIPT
-    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzXjM6_Wiv3Ogew7oK1FTHG9aM5YBkEJl8fFbQhd9Y1e5gd5Yq9jNyW1Mll52tyjyloUA/exec';
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxYnwCEyljyMcY5NE4DkQKLFmT-mzzfwnGoNol8SSlTMG3S9Zk-rTPrYxys52htBoh__Q/exec';
 
     try {
       await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
-        mode: 'no-cors', // Muhim bach mytla3ch lik error d CORS f browser
+        mode: 'no-cors',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
 
-      // Mli kolchi ydoz mzyan:
       setIsSubmitted(true);
       setFormData({ name: '', phone: '', branch: '', city: '' });
       setTimeout(() => setIsSubmitted(false), 5000);
@@ -176,7 +198,7 @@ export default function App() {
                   </div>
                   <div>
                     <h3 className="font-bold text-2xl mb-2">Les délais كيزڭلو</h3>
-                    <p className="text-gray-600 text-lg leading-relaxed font-medium">كل école عندها <span dir="ltr">la date limite</span> ديالها. تقدر تزڭل مدرسة زوينة غير حيت نسيتي نهار التسجيل.</p>
+                    <p className="text-gray-600 text-lg leading-relaxed font-medium">كل école عندها <span dir="ltr">la date limit</span> ديالها. تقدر تزڭل مدرسة زوينة غير حيت نسيتي نهار التسجيل.</p>
                   </div>
                 </li>
                 <li className="flex gap-4">
