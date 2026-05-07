@@ -246,7 +246,7 @@ export default function App() {
           <div className="mt-8 flex flex-col justify-center items-center gap-1 mb-8">
             <span className="text-xl text-gray-400 line-through font-bold">Valeur réelle : 2500 Dhs</span>
             <div className="flex items-baseline gap-2">
-              <span className="text-7xl font-black">2000</span>
+              <span className="text-7xl font-black">1799</span>
               <span className="text-2xl font-bold text-gray-400" dir="ltr">Dhs</span>
             </div>
           </div>
