@@ -141,7 +141,7 @@ export default function App() {
             <span className="text-[#F24A00]">ركز فـ l'Bac ديالك!</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed font-medium">
-            خلينا نتكلفو ليك بـ <strong className="text-black font-extrabold" dir="ltr">les inscriptions</strong> فكتر من 30 <strong className="text-black font-extrabold" dir="ltr">école d'ingénieurs & médecine</strong> فالمغرب. من A حتى لـ Z.
+            خلينا نتكلفو ليك بـ <strong className="text-black font-extrabold" dir="ltr">les inscriptions</strong> فكتر من 20 <strong className="text-black font-extrabold" dir="ltr">école d'ingénieurs & médecine</strong> فالمغرب. من A حتى لـ Z.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button 
@@ -161,7 +161,7 @@ export default function App() {
       <section className="border-y border-gray-100 bg-white py-10">
         <div className="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
           <div>
-            <div className="text-3xl font-black text-[#F24A00]">+30</div>
+            <div className="text-3xl font-black text-[#F24A00]">+20</div>
             <div className="text-gray-500 font-medium text-sm mt-1" dir="ltr">Écoles couvertes</div>
           </div>
           <div>
@@ -252,7 +252,7 @@ export default function App() {
           </div>
 
           <ul className="space-y-4 text-right mb-8 font-bold text-lg">
-            <li className="flex items-start gap-3"><CheckCircle2 className="text-[#F24A00] shrink-0 mt-1"/> <span><span dir="ltr">Inscription</span> فـ <strong>+30 école</strong> (Publique & Privée)</span></li>
+            <li className="flex items-start gap-3"><CheckCircle2 className="text-[#F24A00] shrink-0 mt-1"/> <span><span dir="ltr">Inscription</span> فـ <strong>+20 école</strong> (Publique & Privée)</span></li>
             <li className="flex items-start gap-3"><CheckCircle2 className="text-[#F24A00] shrink-0 mt-1"/> <span>نصايبو ليك <span dir="ltr">les adresses Email</span></span></li>
             <li className="flex items-start gap-3"><CheckCircle2 className="text-[#F24A00] shrink-0 mt-1"/> <span>نصيفطو ليك <span dir="ltr">les reçus</span> فـ WhatsApp</span></li>
             <li className="flex items-start gap-3"><CheckCircle2 className="text-[#F24A00] shrink-0 mt-1"/> <span><span dir="ltr">Suivi</span> مستمر حتى لنهار l'concours</span></li>
